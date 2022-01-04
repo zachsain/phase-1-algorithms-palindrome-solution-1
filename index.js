@@ -1,5 +1,23 @@
+function reverseWord(word) {
+
+  const wordArray = word.split('')
+  const reversedArray = wordArray.reverse()
+  const reversedWord = reversedArray.join("")
+  return reversedWord
+
+}
+
+
 function isPalindrome(word) {
-  // Write your algorithm here
+  
+  const reverse = reverseWord(word)
+
+  if (word === reverse) {
+    return true 
+  } else {
+    return false
+  }
+ 
 }
 
 /* 
@@ -23,3 +41,6 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
+
+console.log(isPalindrome("racecar"))
